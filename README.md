@@ -35,6 +35,11 @@ vim /etc/fstab
 
 change the mount point to use label or update with the new UUIDs, or LVM. Can change from LVM to partition, or vise versa.
 
+...
+/dev/sda3     /                       xfs     defaults        0 0
+/dev/sda1     /boot                   xfs     defaults        0 0
+/dev/sda2     none                    swap    defaults        0 0
+...
 
 vim /etc/selinux/config
 
