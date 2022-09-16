@@ -31,6 +31,10 @@ vim /boot/grub2/grubenv
 
 Update the new UUID of the partition, and/or lvm mappers.
 
+vim /etc/fstab
+
+change the mount point to use label or update with the new UUIDs, or LVM. Can change from LVM to partition, or vise versa.
+
 
 vim /etc/selinux/config
 
