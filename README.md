@@ -4,6 +4,7 @@
 1. Prepare the new hard drive.
 
 Copy the partition table and boot loader rto the new hard drive
+
 dd if=/dev/sda of=/dev/sdb bs=512 count=2048
 
 mkfs.xfs /dev/sdb1
@@ -51,6 +52,7 @@ vim /mnt/etc/selinux/config
 
 make sure selinux is disabled or in permissive mode for easy handle first. Can turn selinux on later.
 
+4. 
 Shutdown the computer, and boot into the new hard drive.
 
 ```
