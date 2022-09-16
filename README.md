@@ -17,10 +17,10 @@ rsync -a -A -X / --exclude=/boot --exclude=/mnt --exclude=/proc --exclude=/sys /
 mkdir /mnt/proc /mnt/sys /mnt/boot
 
 
-mount /dev/sdb1 /mnt/boot  /mnt/boot/
+mount /dev/sdb1 /mnt/boot 
 
 #keep the ACL and Selinux context of all the files when copying
-rsync -a -A -X /boot/
+rsync -a -A -X /boot/ /mnt/boot/
 
 vim /boot/grub2/grub.cfg
 
