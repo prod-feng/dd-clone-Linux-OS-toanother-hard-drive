@@ -13,11 +13,7 @@ mkfs.xfs /dev/sdb3
 
 mount /dev/sdb3 /mnt/
 
-
-
-
 mkdir /mnt/proc /mnt/sys /mnt/boot
-
 
 mount /dev/sdb1 /mnt/boot 
 
