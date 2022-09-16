@@ -19,6 +19,7 @@ mkdir /mnt/proc /mnt/sys /mnt/boot
 
 mount /dev/sdb1 /mnt/boot  /mnt/boot/
 
+#keep the ACL and Selinux context of all the files when copying
 rsync -a -A -X /boot/
 
 vim /boot/grub2/grub.cfg
@@ -33,6 +34,6 @@ Update the new UUID of the partition, and/or lvm mappers.
 
 vim /etc/selinux/config
 
-make sure selinux is disabled or in permissive mode.
+make sure selinux is disabled or in permissive mode for easy handle first. Can turn selinux on later.
 
 ```
