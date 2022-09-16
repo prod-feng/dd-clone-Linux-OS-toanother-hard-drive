@@ -33,11 +33,11 @@ vim /boot/grub2/grub.cfg
 
 sed -i 's/uuidxxxxx/uuidyyyy/g'  /mnt/boot/grub2/grub.cfg
 
-vim /boot/grub2/grubenv
+vim /mnt/boot/grub2/grubenv
 
 Update the new UUID of the partition, and/or lvm mappers.
 
-vim /etc/fstab
+vim /mnt/etc/fstab
 
 change the mount point to use label or update with the new UUIDs, or LVM. Can change from LVM to partition, or vise versa.
 
@@ -47,7 +47,7 @@ change the mount point to use label or update with the new UUIDs, or LVM. Can ch
 /dev/sda2     none                    swap    defaults        0 0
 ...
 
-vim /etc/selinux/config
+vim /mnt/etc/selinux/config
 
 make sure selinux is disabled or in permissive mode for easy handle first. Can turn selinux on later.
 
