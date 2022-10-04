@@ -29,7 +29,7 @@ rsync -a -A -X /boot/ /mnt/boot/
 
 3. Update the configuration of booting/mounting on the new hard drive.
 
-vim /boot/grub2/grub.cfg
+vim /mnt/boot/grub2/grub.cfg
 
 
 sed -i 's/uuidxxxxx/uuidyyyy/g'  /mnt/boot/grub2/grub.cfg
@@ -56,3 +56,7 @@ make sure selinux is disabled or in permissive mode for easy handle first. Can t
 Shutdown the computer, and boot into the new hard drive.
 
 ```
+
+Plus a disk to a raid card, set it as RAID0 logical drive, can also work to boot. One issue is: Make partitions on the disk, make sure NOT use all of the disk space. The raid card seems need to write some logical format info to the end of the drive. 
+
+
