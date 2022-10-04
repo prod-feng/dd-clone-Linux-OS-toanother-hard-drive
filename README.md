@@ -1,4 +1,4 @@
-# dd-clone-Linux-OS-toanother-hard-drive
+# dd-clone-Linux-OS-to-another-hard-drive
 
 ```text
 1. Prepare the new hard drive.
