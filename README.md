@@ -57,6 +57,6 @@ Shutdown the computer, and boot into the new hard drive.
 
 ```
 
-Plus a disk to a raid card, set it as RAID0 logical drive, can also work to boot. One issue is: Make partitions on the disk, make sure NOT use all of the disk space. The raid card seems need to write some logical format info to the end of the drive. 
+Plus disk can also been connected to a raid card, set it as RAID0 logical drive, and work to boot. One issue is: When make partitions on the disk, make sure NOT use all of the disk space. The raid card seems need to write some logical format info to the end of the drive. 
 
 
