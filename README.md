@@ -67,9 +67,10 @@ May be you can use chroot to the mounted new hard drive, and use grub2-mkconfig 
 vim /mnt/etc/fstab
 ```
 
-```text
+
 change the mount point to use label or update with the new UUIDs, or LVM. Can change from LVM to partition, or vise versa.
 
+```text
 ...
 /dev/sda3     /                       xfs     defaults        0 0
 /dev/sda1     /boot                   xfs     defaults        0 0
@@ -78,7 +79,7 @@ change the mount point to use label or update with the new UUIDs, or LVM. Can ch
 
 vim /mnt/etc/selinux/config
 ```
-```text
+
 
 make sure selinux is disabled or in permissive mode for easy handle first. Can turn selinux on later.
 
