@@ -1,11 +1,18 @@
 # dd-clone-Linux-OS-to-another-hard-drive
 
+
+Using dd to clone the boot loader and partition table to a new hard drive, and then using rsync to copy the data. Avoid to copy the whole disk, to to fast disk copy. From here, you can change the partition of the new hard drive, like change from partition to LVM, etc.
+
 ```text
 1. Prepare the new hard drive.
 
 Copy the partition table and boot loader rto the new hard drive
 
 dd if=/dev/sda of=/dev/sdb bs=512 count=2048
+
+#You can then change the partition table of the new hard drive, like using fdisk, parded, etc.
+
+#make the file systems on the partitions. (can use different fs type from the original one)
 
 mkfs.xfs /dev/sdb1
 mkswap /dev/sdb2
@@ -31,12 +38,14 @@ rsync -a -A -X /boot/ /mnt/boot/
 
 vim /mnt/boot/grub2/grub.cfg
 
-
+#change the UUID to the new hard drive, if any.
 sed -i 's/uuidxxxxx/uuidyyyy/g'  /mnt/boot/grub2/grub.cfg
 
 vim /mnt/boot/grub2/grubenv
 
 Update the new UUID of the partition, and/or lvm mappers.
+
+#May be you can use chroot to the mounted new hard drive, and use grub2-mkconfig command to update the the grub, but not sure.
 
 vim /mnt/etc/fstab
 
