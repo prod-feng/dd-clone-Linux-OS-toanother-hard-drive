@@ -1,7 +1,7 @@
 # dd-clone-Linux-OS-to-another-hard-drive
 
 
-Using dd to clone the boot loader and partition table to a new hard drive, and then using rsync to copy the data. Avoid to copy the whole disk, to to fast disk copy. From here, you can change the partition of the new hard drive, like change from partition to LVM, etc.
+Using dd to clone the boot loader and partition table to a new hard drive, and then using rsync to copy the data. Avoid to copy the whole disk, to do fast disk copy. From here, you can change the partition of the new hard drive, like change from partition to LVM, etc.
 
 ```text
 1. Prepare the new hard drive.
