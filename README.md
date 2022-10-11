@@ -5,6 +5,7 @@
 
 From here, you can also change the partition of the new hard drive, file system, etc, like change from partition to LVM, ext4 to xfs.
 
+## Clone disk to a new disk with different size.
 
 1. Prepare the new hard drive.
 
