@@ -20,7 +20,7 @@ dd if=/dev/sda of=/dev/sdb bs=512 count=2048
 You can then change the partition table of the new hard drive, like using fdisk, parded, etc.
 
 ```text
-fdisk /de/sdb
+fdisk /dev/sdb
 ```
 make the file systems on the partitions. (can use different fs type from the original one)
 
